@@ -1,0 +1,56 @@
+Documentación Resumida de la API
+
+
+Endpoints para Estudiantes
+
+getAllEstudiantes
+
+Descripción: Obtiene una lista de todos los estudiantes registrados.
+Método HTTP: GET
+URL: /estudiante/getAllEstudiantes
+addStudent(student)
+
+Descripción: Añade un nuevo estudiante a la base de datos.
+Método HTTP: POST
+URL: /estudiante/cargarEstudiante
+Parámetro: student (objeto con los datos del estudiante)
+
+{
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "documento": 12345678,
+    "sexoId": 1,
+    "carreraId": 1
+}
+
+
+
+
+
+
+deleteStudent(id)
+Descripción: Elimina un estudiante específico mediante su ID.
+Método HTTP: DELETE
+URL: /estudiante/borrarEstudianteById/{id}
+Parámetro: id (ID del estudiante a eliminar)
+Endpoints para Filtrar por Sexo
+searchMen
+
+Descripción: Obtiene una lista de estudiantes de sexo masculino.
+Método HTTP: GET
+URL: /sexo/getBySexo/masculino
+searchWomen
+
+Descripción: Obtiene una lista de estudiantes de sexo femenino.
+Método HTTP: GET
+URL: /sexo/getBySexo/femenino
+searchAllSexos
+
+Descripción: Recupera todos los tipos de sexo disponibles.
+Método HTTP: GET
+URL: /sexo/getAllSexo
+Endpoints para Carreras
+searchAllCarreras
+Descripción: Obtiene todas las carreras disponibles en la base de datos.
+Método HTTP: GET
+URL: /carrera/getAllCarreras
